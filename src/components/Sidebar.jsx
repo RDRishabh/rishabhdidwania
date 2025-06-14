@@ -8,7 +8,7 @@ const Sidebar = () => {
   const menuItems = [
     { path: '/', label: 'Home', icon: Home },
     { path: '/projects', label: 'Projects', icon: FolderOpen },
-    { path: '/services', label: 'Services', icon: Settings },
+    { path: '/services', label: 'Skills', icon: Settings },
     { path: '/contact', label: 'Contact', icon: MessageCircle }
   ];
 

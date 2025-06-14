@@ -3,7 +3,7 @@ import './App.css';
 import Sidebar from './components/Sidebar';
 import HomePage from './components/HomePage';
 import ProjectsPage from './components/ProjectsPage';
-import ServicesPage from './components/ServicesPage';
+import SkillsPage from './components/ServicesPage';
 import ContactPage from './components/ContactPage';
 import GeometricBackground from './components/GeometricPattern';
 
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/services" element={<SkillsPage />} />
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
