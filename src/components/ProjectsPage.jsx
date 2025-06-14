@@ -10,31 +10,31 @@ const ProjectsPage = () => {
       title: "Jai Multi",
       url: "https://jai-multi.vercel.app/",
       category: "Client Projects",
-      description: "Multi-purpose web application with modern design and functionality",
-      tech: ["React.js", "Vercel", "Website"],
+      description: "Multi-purpose web application with React.js and modern tech stack implementation",
+      tech: ["React.js", "Vercel", "JavaScript"],
       thumbnail: `/png/Jai_Multi.png`
     },
     {
       title: "Krackpot",
       url: "https://krackpot.vercel.app/",
       category: "Client Projects",
-      description: "Interactive web application with dynamic features",
-      tech: ["React.js", "Vercel", "Website"],
+      description: "Interactive web application with dynamic features and responsive architecture",
+      tech: ["React.js", "Vercel", "JavaScript"],
       thumbnail: `/png/Krackpot.png`
     },
     {
       title: "Nova Watches",
       url: "https://novawatches.in/",
       category: "Client Projects",
-      description: "E-commerce platform for luxury watches with elegant design",
-      tech: ["E-commerce", "Responsive Design", "Payment Integration"],
+      description: "E-commerce platform for luxury watches with payment gateway integration",
+      tech: ["E-commerce", "Payment Gateway", "React.js"],
       thumbnail: `/png/Nova_Watches.png`
     },
     {
       title: "Learn Infini",
       url: "https://www.learninfini.com/",
       category: "Client Projects",
-      description: "Educational platform for online learning and skill development",
+      description: "Educational platform for online learning with Razorpay payment integration",
       tech: ["EdTech", "Razorpay", "React.js"],
       thumbnail: `/png/LearnInfini.png`
     },
@@ -42,31 +42,31 @@ const ProjectsPage = () => {
       title: "Marieta",
       url: "http://marieta.in/",
       category: "Client Projects",
-      description: "Professional business website with clean design",
-      tech: ["React.js", "Tailwind CSS", "Website"],
+      description: "Professional business website built with React.js and Tailwind CSS",
+      tech: ["React.js", "Tailwind CSS", "JavaScript"],
       thumbnail: `/png/Marieta.png`
     },
     {
       title: "Hikki",
       url: "https://www.hikki.co/",
       category: "Client Projects",
-      description: "Modern business platform with innovative solutions",
-      tech: ["React.js", "Tailwind CSS", "Website"],
+      description: "Modern business platform with innovative technical solutions",
+      tech: ["React.js", "Tailwind CSS", "JavaScript"],
       thumbnail: `/png/Hikki.png`
     },
     {
       title: "BYOC Live",
       url: "https://www.byoc.live/",
       category: "Client Projects",
-      description: "Live streaming and interactive platform",
-      tech: ["React.js", "Tailwind CSS", "Website"],
+      description: "Live streaming platform with real-time communication features",
+      tech: ["React.js", "WebRTC", "Node.js"],
       thumbnail: `/png/BYOC.png`
     },
     {
       title: "Curtains & More",
       url: "https://curtains-and-more-re.vercel.app/",
       category: "Client Projects",
-      description: "E-commerce platform for home decor and curtains",
+      description: "E-commerce platform for home decor with inventory management system",
       tech: ["E-commerce", "React.js", "Vercel"],
       thumbnail: `/png/Curtains_And_More.png`
     },
@@ -74,40 +74,40 @@ const ProjectsPage = () => {
       title: "Aucto Games",
       url: "http://auctogames.com/",
       category: "Client Projects",
-      description: "Gaming platform with auction-based mechanics",
-      tech: ["Gaming", "Real-time", "WebSockets"],
+      description: "Gaming platform with auction-based mechanics and real-time WebSocket communication",
+      tech: ["Gaming", "WebSockets", "Real-time"],
       thumbnail: `/png/Aucto_Games.png`
     },
     {
       title: "Monarque",
       url: "https://www.monarque.co.in/",
       category: "Client Projects",
-      description: "Luxury brand website with premium design",
-      tech: ["Luxury Design", "Responsive", "Website"],
+      description: "Luxury brand website with responsive web development and performance optimization",
+      tech: ["React.js", "Performance Optimization", "Responsive"],
       thumbnail: `/png/Monarque.png`
     },
     {
       title: "Blue Bagels",
       url: "https://www.bluebagels.com/",
       category: "Client Projects",
-      description: "Food and beverage business website",
-      tech: ["React.js", "Tailwind CSS", "Website"],
+      description: "Food and beverage business website with React.js and modern web technologies",
+      tech: ["React.js", "Tailwind CSS", "JavaScript"],
       thumbnail: `/png/Blue_Bagels.png`
     },
     {
       title: "Green Bridge AI",
       url: "https://greenbridge.ai/",
       category: "Client Projects",
-      description: "AI-powered platform for sustainable solutions",
-      tech: ["AI-Based", "Sustainability", "Website"],
+      description: "AI-powered platform for sustainable solutions with machine learning integration",
+      tech: ["AI/ML", "React.js", "API Integration"],
       thumbnail: `/png/GreenBridge_ai.png`
     },
     {
       title: "Kind Matter",
       url: "https://kindmatter.in/?pb=0",
       category: "Client Projects",
-      description: "Social impact platform for community engagement",
-      tech: ["Website", "Community", "React.js"],
+      description: "Social impact platform for community engagement with database management",
+      tech: ["React.js", "Database", "Community Platform"],
       thumbnail: `/png/Kind_Matter.png`
     }
   ];
@@ -135,19 +135,20 @@ const ProjectsPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br ">
+    <div className="min-h-screen bg-black">
       <div className="max-w-7xl mx-auto px-4 py-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-6xl font-bold text-white mb-4 tracking-tight">
-            My <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">Portfolio</span>
+            My <span className="text-gray-500">Portfolio</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Explore my collection of websites, web applications, and digital experiences
+            Explore my collection of web applications, e-commerce platforms, and technical solutions
           </p>
         </div>
 
-        {/* Search Bar */}
+        {/* Search Bar - Commented Out */}
+        {/*
         <div className="relative max-w-2xl mx-auto mb-8">
           <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
           <input
@@ -158,8 +159,10 @@ const ProjectsPage = () => {
             className="w-full pl-12 pr-4 py-4 bg-gray-800/50 border border-gray-700/50 rounded-2xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-transparent backdrop-blur-xl transition-all duration-300"
           />
         </div>
+        */}
 
-        {/* Category Filter */}
+        {/* Category Filter - Commented Out */}
+        {/*
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {categories.map((category) => {
             const IconComponent = category.icon;
@@ -182,6 +185,7 @@ const ProjectsPage = () => {
             );
           })}
         </div>
+        */}
 
         {/* Results Count */}
         <div className="text-center mb-8">
@@ -196,7 +200,7 @@ const ProjectsPage = () => {
             <div
               key={index}
               onClick={() => handleCardClick(project.url)}
-              className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-800/80 to-gray-900/80 backdrop-blur-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/20 cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500/30 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
             >
               {/* Thumbnail */}
               <div className="relative overflow-hidden">
@@ -219,7 +223,7 @@ const ProjectsPage = () => {
 
                 {/* External Link Icon */}
                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-white/20 backdrop-blur-sm rounded-full p-2">
+                  <div className="bg-gray-800/80 backdrop-blur-sm rounded-full p-2 border border-gray-700">
                     <ExternalLink className="w-4 h-4 text-white" />
                   </div>
                 </div>
@@ -240,13 +244,13 @@ const ProjectsPage = () => {
                   {project.tech.slice(0, 3).map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-gray-700/50 text-gray-300 px-2 py-1 rounded-md text-xs font-medium"
+                      className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-medium"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.tech.length > 3 && (
-                    <span className="bg-gray-700/50 text-gray-300 px-2 py-1 rounded-md text-xs font-medium">
+                    <span className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-medium">
                       +{project.tech.length - 3}
                     </span>
                   )}
@@ -270,6 +274,9 @@ const ProjectsPage = () => {
           </div>
         )}
       </div>
+
+      {/* Footer with Name - matching home page style */}
+      
     </div>
   );
 };

@@ -1,11 +1,15 @@
-import { Home, FolderOpen, Settings, MessageCircle, Bookmark, Layers, Twitter, Download } from 'lucide-react'; // Example import
+import { Link, useLocation } from 'react-router-dom';
+import { Home, FolderOpen, Settings, MessageCircle, Bookmark, Layers, Twitter, Download } from 'lucide-react';
 
-const Sidebar = ({ activeSection, setActiveSection }) => {
+const Sidebar = () => {
+  const location = useLocation();
+  const currentPath = location.pathname;
+
   const menuItems = [
-    { id: 'home', label: 'Home', icon: Home },
-    { id: 'projects', label: 'Projects', icon: FolderOpen },
-    { id: 'services', label: 'Services', icon: Settings },
-    { id: 'contact', label: 'Contact', icon: MessageCircle }
+    { path: '/', label: 'Home', icon: Home },
+    { path: '/projects', label: 'Projects', icon: FolderOpen },
+    { path: '/services', label: 'Services', icon: Settings },
+    { path: '/contact', label: 'Contact', icon: MessageCircle }
   ];
 
   const resources = [
@@ -13,6 +17,7 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
     { id: 'stack', label: 'Stack', icon: Layers },
     { id: 'twitter', label: 'Twitter', icon: Twitter }
   ];
+
   const currentDate = new Date().toLocaleDateString("en-IN", {
     day: "numeric",
     month: "numeric",
@@ -34,38 +39,21 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
       <nav className="px-6 flex-1">
         {menuItems.map((item) => {
           const IconComponent = item.icon;
+          const isActive = currentPath === item.path;
+
           return (
-            <button
-              key={item.id}
-              onClick={() => setActiveSection(item.id)}
+            <Link
+              key={item.path}
+              to={item.path}
               className={`w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-left transition-all duration-200 mb-1 ${
-                activeSection === item.id
-                  ? 'bg-gray-900 text-white'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-900'
+                isActive ? 'bg-gray-900 text-white' : 'text-gray-400 hover:text-white hover:bg-gray-900'
               }`}
             >
               <IconComponent size={18} />
               <span className="font-medium">{item.label}</span>
-            </button>
+            </Link>
           );
         })}
-
-        {/* Resources Section */}
-        {/* <div className="mt-8">
-          <h4 className="text-gray-500 text-xs uppercase tracking-wider font-semibold mb-4 px-3">Resources</h4>
-          {resources.map((item) => {
-            const IconComponent = item.icon;
-            return (
-              <button
-                key={item.id}
-                className="w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-left text-gray-400 hover:text-white hover:bg-gray-900 transition-all duration-200 mb-1"
-              >
-                <IconComponent size={18} />
-                <span className="font-medium">{item.label}</span>
-              </button>
-            );
-          })}
-        </div> */}
       </nav>
 
       {/* Footer */}
@@ -74,16 +62,14 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
           <p className="font-medium">{currentDate}</p>
           <p>Kanpur, UP</p>
         </div>
-        <button className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm font-medium">
-          <a
-            href="/Rishabh_Didwania_Resume.pdf"
-            download
-            className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"
+        <a
+          href="/Rishabh_Didwania_Resume.pdf"
+          download
+          className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors text-sm font-medium"
         >
-            <Download size={16} />
-            <span>Download CV</span>
+          <Download size={16} />
+          <span>Download CV</span>
         </a>
-        </button>
       </div>
     </div>
   );
