@@ -109,6 +109,30 @@ const ProjectsPage = () => {
       description: "Social impact platform for community engagement with database management",
       tech: ["React.js", "Database", "Community Platform"],
       thumbnail: `/png/Kind_Matter.png`
+    },
+    {
+      title: "Visiting Card Atharv Associates",
+      url: "https://atharvassociates.vercel.app/",
+      category: "Client Projects",
+      description: "Professional visiting card website for Atharv Associates",
+      tech: ["React.js", "Tailwind CSS"],
+      thumbnail: `/png/AtharvAssociates.jpg`
+    },
+    {
+      title: "Industrial Control System",
+      url: "https://www.industrialcontrolsystem.co.in/",
+      category: "Client Projects",
+      description: "Empowering Your Electrical Infrastructure with Excellence",
+      tech: ["React.js", "Tailwind CSS"],
+      thumbnail: `/png/ICS.jpg`
+    },
+    {
+      title: "Mint Ginger LLP",
+      url: "https://mgfrontend.vercel.app/",
+      category: "Client Projects",
+      description: "Discover their portfolio of exceptional architectural achievements,  Mint Ginger LLP",
+      tech: ["React.js", "Tailwind CSS"],
+      thumbnail: `/png/MgLlp.jpg`
     }
   ];
 
