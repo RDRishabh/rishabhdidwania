@@ -133,6 +133,14 @@ const ProjectsPage = () => {
       description: "Discover their portfolio of exceptional architectural achievements,  Mint Ginger LLP",
       tech: ["React.js", "Tailwind CSS"],
       thumbnail: `/png/MgLlp.jpg`
+    },
+    {
+      title: "Finovatech",
+      url: "https://thefinovatech.com/",
+      category: "Client Projects",
+      description: "Finovatech is a leading provider of innovative financial technology solutions.",
+      tech: ["React.js", "Tailwind CSS"],
+      thumbnail: `/png/Finovatech.png`
     }
   ];
 
@@ -220,9 +228,9 @@ const ProjectsPage = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, index) => (
+          {[...filteredProjects].reverse().map((project) => (
             <div
-              key={index}
+              key={project.title}
               onClick={() => handleCardClick(project.url)}
               className="group relative overflow-hidden rounded-2xl bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500/30 transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl cursor-pointer"
             >
