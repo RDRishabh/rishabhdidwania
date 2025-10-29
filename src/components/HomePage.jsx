@@ -203,7 +203,7 @@ const HomePage = ({ setActiveSection }) => {
                   Pranveer Singh Institute of Technology, Kanpur
                 </p>
                 <div className="flex flex-col sm:flex-row sm:items-center space-y-1 sm:space-y-0 sm:space-x-6 text-gray-400 text-sm">
-                  <span>CGPA: 8.34 (Till 5th Sem)</span>
+                  <span>CGPA: 8.52</span>
                   <span className="hidden sm:block">•</span>
                   <span>Nov 2021 - Jul 2025</span>
                   <span className="hidden sm:block">•</span>
