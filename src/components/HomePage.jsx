@@ -247,7 +247,14 @@ const HomePage = ({ setActiveSection }) => {
             ))}
             
             {/* Projects Redirect Card */}
-            <div className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-blue-500/30 hover:border-blue-400 transition-all duration-200 group cursor-pointer">
+            <div
+              role="button"
+              tabIndex={0}
+              onClick={() => { window.location.href = '/projects'; }}
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { window.location.href = '/projects'; } }}
+              aria-label="View all projects"
+              className="bg-gradient-to-br from-blue-600/10 to-purple-600/10 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-blue-500/30 hover:border-blue-400 transition-all duration-200 group cursor-pointer"
+            >
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-4 lg:space-y-0">
                 <div className="flex-1">
                   <h4 className="text-xl lg:text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
